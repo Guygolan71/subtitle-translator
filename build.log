@@ -1,0 +1,18 @@
+== compiling arm64
+== compiling x86_64
+== icon
+== signing (ad-hoc)
+build/Subtitle Translator.app: replacing existing signature
+build/Subtitle Translator.app: valid on disk
+build/Subtitle Translator.app: satisfies its Designated Requirement
+== zipping
+total 2792
+drwxr-xr-x   8 runner  staff     256 Oct 23 19:25 .
+drwxr-xr-x  12 runner  staff     384 Oct 23 19:25 ..
+drwxr-xr-x  12 runner  staff     384 Oct 23 19:25 AppIcon.iconset
+-rwxr-xr-x   1 runner  staff  294360 Oct 23 19:25 st-arm64
+-rwxr-xr-x   1 runner  staff  275808 Oct 23 19:25 st-x86_64
+drwxr-xr-x   3 runner  staff      96 Oct 23 19:25 Subtitle Translator.app
+-rwxr-xr-x   1 runner  staff  589272 Oct 23 19:25 SubtitleTranslator
+-rw-r--r--   1 runner  staff  262638 Oct 23 19:25 SubtitleTranslator.zip
+BUILD OK
