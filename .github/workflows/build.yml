@@ -1,0 +1,46 @@
+name: Build app
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build
+        run: |
+          set -o pipefail
+          chmod +x build.sh
+          ./build.sh 2>&1 | tee build.log
+
+      - name: Publish release
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release delete latest -y --cleanup-tag || true
+          gh release create latest "build/SubtitleTranslator.zip" \
+            --title "Subtitle Translator — גרסה אחרונה" \
+            --notes "הורד את SubtitleTranslator.zip, פתח אותו וגרור את Subtitle Translator לתיקיית Applications."
+
+      - name: Save build log
+        if: always()
+        run: |
+          cp build.log /tmp/build.log 2>/dev/null || echo "no log" > /tmp/build.log
+          echo "${{ job.status }} ${{ github.sha }}" > /tmp/status.txt
+          git config user.name "build-bot"
+          git config user.email "build-bot@users.noreply.github.com"
+          git checkout --orphan ci-log-tmp
+          git rm -rf --cached . >/dev/null 2>&1 || true
+          cp /tmp/build.log build.log
+          cp /tmp/status.txt status.txt
+          git add -f build.log status.txt
+          git commit -m "build log ${{ github.sha }}"
+          git push -f origin HEAD:ci-log

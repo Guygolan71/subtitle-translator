@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleIdentifier</key>
+    <string>com.guygolan71.subtitletranslator</string>
+    <key>CFBundleName</key>
+    <string>Subtitle Translator</string>
+    <key>CFBundleDisplayName</key>
+    <string>Subtitle Translator</string>
+    <key>CFBundleExecutable</key>
+    <string>SubtitleTranslator</string>
+    <key>CFBundleIconFile</key>
+    <string>AppIcon</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0</string>
+    <key>CFBundleVersion</key>
+    <string>1</string>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>he</string>
+    <key>LSMinimumSystemVersion</key>
+    <string>13.0</string>
+    <key>LSUIElement</key>
+    <true/>
+    <key>NSHighResolutionCapable</key>
+    <true/>
+    <key>NSDownloadsFolderUsageDescription</key>
+    <string>כדי לזהות קבצי כתוביות חדשים בתיקיית ההורדות ולשמור לידם את התרגום.</string>
+    <key>NSDesktopFolderUsageDescription</key>
+    <string>כדי לזהות קבצי כתוביות חדשים בתיקייה שבחרת ולשמור לידם את התרגום.</string>
+    <key>NSDocumentsFolderUsageDescription</key>
+    <string>כדי לזהות קבצי כתוביות חדשים בתיקייה שבחרת ולשמור לידם את התרגום.</string>
+    <key>NSRemovableVolumesUsageDescription</key>
+    <string>כדי לתרגם כתוביות בתיקייה שבחרת בכונן חיצוני.</string>
+    <key>NSNetworkVolumesUsageDescription</key>
+    <string>כדי לתרגם כתוביות בתיקייה שבחרת בכונן רשת.</string>
+</dict>
+</plist>
